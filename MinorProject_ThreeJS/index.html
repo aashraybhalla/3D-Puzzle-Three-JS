@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Puzzle Game</title>
+    <link rel="stylesheet" href="src/style.css"> <!-- Link to CSS file -->
+</head>
+<body>
+    <!-- Start Screen -->
+    <div id="startScreen" class="screen">
+        <button id="startButton">Start Game</button>
+        <div id="background"></div>
+    </div>
+
+    <!-- Level Selection Screen -->
+    <div id="levelSelectScreen" class="screen" style="display: none;">
+        <img src="/room1/Front.jpg" class="level" id="level1" alt="Level 1">
+        <img src="/room2/Front.jpg" class="level" id="level2" alt="Level 2">
+    </div>
+
+    <!-- Skybox Display -->
+    <div id="gameContainer" style="display: none;"></div>
+
+    <button id="moveToPuzzleButton" style="display: none; position: absolute; bottom: 20px; right: 20px; z-index: 2;">
+        Move to the Puzzle
+    </button>
+
+    <!-- Puzzle Display -->
+    <div id="puzzleScreen" style="display: none;">
+        <div id="puzzle-container"> 
+
+            <div id="timer">Time Remaining: 2:00 </div>
+            <!-- <button id="viewRoom">
+                View Room
+            </button> -->
+        </div>
+    </div>
+
+    <!-- Win Screen -->
+    <div id="winScreen" class="screen" style="display: none;">
+        <h1 id="winText">Congratulations!</h1>
+        <button id="playAgainButton">Play Again</button>
+    </div>
+
+    <audio id="backgroundMusic" loop>
+        <source src="/music/background-music.mp3" type="audio/mp3">
+    </audio>
+    
+    <!-- Ticking sound -->
+    <audio id="tickingSound" loop>
+        <source src="/music/ticking-sound.mp3" type="audio/mp3">
+    </audio>
+
+    <script type="module" src="src/script.js"></script>
+</body>
+</html>
